@@ -10,11 +10,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="main" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <header>
+            <asp:SiteMapDataSource ID="librarySiteMap" runat="server" ShowStartingNode="false" />
+            <asp:Menu ID="mnuNavigation" DataSourceID="librarySiteMap" runat="server" Orientation="Horizontal">
+                <StaticMenuItemStyle CssClass="menuNavItem" />
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="headerContent" runat="server"></asp:ContentPlaceHolder>
+        </header>
+        <div id="mainPadding">
+            <div id="main">
+                <asp:ContentPlaceHolder ID="mainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
     </form>
 </body>
 </html>
