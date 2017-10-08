@@ -1,0 +1,15 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    color: rgb(30,30,30);
+    font-family: "Arial", sans-serif;
+}
+
+.menuNavItem {
+    padding: 1em 2em !important;
+}
