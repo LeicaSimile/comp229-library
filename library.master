@@ -15,7 +15,9 @@
             <asp:Menu ID="mnuNavigation" DataSourceID="librarySiteMap" runat="server" Orientation="Horizontal">
                 <StaticMenuItemStyle CssClass="menuNavItem" />
             </asp:Menu>
-            <asp:ContentPlaceHolder ID="headerContent" runat="server"></asp:ContentPlaceHolder>
+            <div id="header">
+                <asp:ContentPlaceHolder ID="headerContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
         </header>
         <div id="mainPadding">
             <div id="main">
