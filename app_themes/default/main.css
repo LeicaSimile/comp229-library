@@ -32,3 +32,24 @@ header h1 {
 .menuNavItem {
     padding: 1em 2em !important;
 }
+
+div#header {
+    width: 70%;
+    margin: 0 500px 0 200px;
+}
+
+#main {
+    background: inherit;
+    color: rgb(30,30,30);
+}
+
+#mainPadding {
+    background: rgb(220,220,220);
+    margin: 10px 500px 100px 200px;
+    padding: 20px 100px 50px 50px;
+    width: 70%
+}
+
+#mnuNavigation {
+    height: 60px;
+}
