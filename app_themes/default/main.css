@@ -11,6 +11,24 @@ body {
     font-family: "Arial", sans-serif;
 }
 
+header a {
+    color: rgb(200,200,200);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header a:hover {
+    color: rgb(240,210,230);
+    font-size: 1.1em;
+}
+
+header h1 {
+    font-family: "Georgia";
+    font-size: 3em;
+    margin: 0 auto;
+    font-variant: small-caps;
+}
+
 .menuNavItem {
     padding: 1em 2em !important;
 }
