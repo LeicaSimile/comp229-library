@@ -6,11 +6,19 @@
     <h1>Add Book</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
-    <h1>7 am, the usual morning lineup</h1>
-    <p>
-        Start on the chores and sweep &#39;til the floor&#39;s all clean. Polish and wax, do laundry, and mop and shine up.
-        Sweep again and, by then, it&#39;s, like, 7:15. And so I&#39;ll read a book, or maybe two or three. I&#39;ll add a
-        few new paintings to my gallery. I&#39;ll play guitar, and knit, and cook, and basically just wonder, when will my life begin?
-    </p>
+    Title: <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+    Author(s): <asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox>
+    ISBN: <asp:TextBox ID="txtIsbn" runat="server"></asp:TextBox>
+    <br />
+    Genre: <asp:DropDownList ID="ddlGenre" runat="server"></asp:DropDownList>
+    Number of pages: <asp:TextBox ID="txtPages" runat="server"></asp:TextBox>
+    <br />
+    Landed to a friend:
+    <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
+    <asp:RadioButton ID="radLandedNo" runat="server" Text="No" GroupName="grpLanded" />
+    <br />
+    Name of a friend: <asp:TextBox ID="txtFriendName" runat="server"></asp:TextBox>
+    <br />
+    Comments: <asp:TextBox ID="txtComments" runat="server"></asp:TextBox>
 </asp:Content>
 
