@@ -11,7 +11,7 @@
     ISBN: <asp:TextBox ID="txtIsbn" runat="server"></asp:TextBox>
     <br />
     Genre: <asp:DropDownList ID="ddlGenre" runat="server"></asp:DropDownList>
-    Number of pages: <asp:TextBox ID="txtPages" runat="server"></asp:TextBox>
+    Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>
     <br />
     Landed to a friend:
     <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
