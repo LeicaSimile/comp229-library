@@ -19,6 +19,11 @@
     <br />
     Name of a friend: <asp:TextBox ID="txtFriendName" runat="server"></asp:TextBox>
     <br />
-    Comments: <asp:TextBox ID="txtComments" runat="server"></asp:TextBox>
+    Comments:
+    <br />
+    <asp:TextBox ID="txtComments" runat="server" Rows="4" TextMode="MultiLine"></asp:TextBox>
+    <br />
+    <asp:Button ID="btnSave" runat="server" Text="Save" />
+    <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
 </asp:Content>
 
