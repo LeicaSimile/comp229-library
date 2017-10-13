@@ -15,7 +15,7 @@
     Genre: <asp:DropDownList ID="ddlGenre" runat="server"></asp:DropDownList>
     Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>
     <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages"></asp:requiredfieldvalidator>
-    <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1"></asp:rangevalidator>
+    <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1" MaximumValue="99999"></asp:rangevalidator>
     <br />
     Landed to a friend:
     <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
