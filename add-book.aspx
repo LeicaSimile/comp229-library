@@ -7,15 +7,15 @@
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
     Title: <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="Title required" ID="rfvTitle"></asp:requiredfieldvalidator>
+    <asp:requiredfieldvalidator runat="server" errormessage="Title required" ID="rfvTitle" ControlToValidate="txtTitle"></asp:requiredfieldvalidator>
     Author(s): <asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="Author required" ID="rfvAuthor"></asp:requiredfieldvalidator>
+    <asp:requiredfieldvalidator runat="server" errormessage="Author required" ID="rfvAuthor" ControlToValidate="txtAuthor"></asp:requiredfieldvalidator>
     ISBN: <asp:TextBox ID="txtIsbn" runat="server"></asp:TextBox>
     <br />
     Genre: <asp:DropDownList ID="ddlGenre" runat="server"></asp:DropDownList>
     Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages"></asp:requiredfieldvalidator>
-    <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" MinimumValue="1"></asp:rangevalidator>
+    <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages"></asp:requiredfieldvalidator>
+    <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1"></asp:rangevalidator>
     <br />
     Landed to a friend:
     <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
