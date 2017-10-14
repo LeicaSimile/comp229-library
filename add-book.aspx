@@ -12,7 +12,17 @@
     <asp:requiredfieldvalidator runat="server" errormessage="Author required" ID="rfvAuthor" ControlToValidate="txtAuthor"></asp:requiredfieldvalidator>
     ISBN: <asp:TextBox ID="txtIsbn" runat="server"></asp:TextBox>
     <br />
-    Genre: <asp:DropDownList ID="ddlGenre" runat="server"></asp:DropDownList>
+    Genre: <asp:DropDownList ID="ddlGenre" runat="server">
+        <asp:ListItem>Action/adventure</asp:ListItem>
+        <asp:ListItem>Drama</asp:ListItem>
+        <asp:ListItem>Fantasy</asp:ListItem>
+        <asp:ListItem>Horror</asp:ListItem>
+        <asp:ListItem>Mystery</asp:ListItem>
+        <asp:ListItem>Romance</asp:ListItem>
+        <asp:ListItem>Satire</asp:ListItem>
+        <asp:ListItem>Sci-fi</asp:ListItem>
+        <asp:ListItem>Other</asp:ListItem>
+    </asp:DropDownList>
     Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>
     <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages"></asp:requiredfieldvalidator>
     <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1" MaximumValue="99999"></asp:rangevalidator>
