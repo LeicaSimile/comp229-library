@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="add-book.aspx.cs" Inherits="add_book" Theme="default" %>
+<%@ Register TagPrefix="field" TagName="BasicBookInfo" Src="~/BasicBookInfo.ascx" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -6,11 +7,7 @@
     <h1>Add Book</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
-    Title: <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="Title required" ID="rfvTitle" ControlToValidate="txtTitle"></asp:requiredfieldvalidator>
-    Author(s): <asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="Author required" ID="rfvAuthor" ControlToValidate="txtAuthor"></asp:requiredfieldvalidator>
-    ISBN: <asp:TextBox ID="txtIsbn" runat="server"></asp:TextBox>
+    <field:BasicBookInfo ID="bbiEntry" runat="server" />
     <br />
     Genre: <asp:DropDownList ID="ddlGenre" runat="server">
         <asp:ListItem>Action/adventure</asp:ListItem>
