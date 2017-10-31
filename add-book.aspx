@@ -28,7 +28,7 @@
     <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
     <asp:RadioButton ID="radLandedNo" runat="server" Text="No" GroupName="grpLanded" Checked="True" />
     <br />
-    Name of a friend: <asp:TextBox ID="txtFriendName" runat="server" Visible="False"></asp:TextBox>
+    <asp:Label ID="lblFriendName" runat="server" Text="Name of friend: " Visible="False"></asp:Label><asp:TextBox ID="txtFriendName" runat="server" Visible="False"></asp:TextBox>
     <br />
     Comments:
     <br />
