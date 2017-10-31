@@ -11,4 +11,12 @@ public partial class add_book : System.Web.UI.Page
     {
 
     }
+
+    protected void CheckFriendName(object sender, ServerValidateEventArgs e)
+    {
+        if (radLandedYes.Checked && string.IsNullOrEmpty(txtFriendName.Text))
+        {
+            e.IsValid = false;
+        }
+    }
 }

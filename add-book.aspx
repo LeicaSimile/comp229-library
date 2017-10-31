@@ -28,7 +28,9 @@
     <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
     <asp:RadioButton ID="radLandedNo" runat="server" Text="No" GroupName="grpLanded" Checked="True" />
     <br />
-    <asp:Label ID="lblFriendName" runat="server" Text="Name of friend: " Visible="False"></asp:Label><asp:TextBox ID="txtFriendName" runat="server" Visible="False"></asp:TextBox>
+    Name of friend: <asp:TextBox ID="txtFriendName" runat="server"></asp:TextBox>
+    <asp:CustomValidator ID="vldFriendName" runat="server" OnServerValidate="CheckFriendName" ErrorMessage="Name of friend required" ControlToValidate="txtFriendName" ValidateEmptyText="True"></asp:CustomValidator>
+    <br />
     <br />
     Comments:
     <br />
