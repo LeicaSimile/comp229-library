@@ -1,2 +1,55 @@
-﻿body {
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background: rgb(20,0,10);
+    color: rgb(240,240,240);
+    font-family: "Arial", sans-serif;
+}
+
+header a {
+    color: rgb(200,200,200);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    header a:hover {
+        color: rgb(240,210,230);
+        font-size: 1.1em;
+    }
+
+header h1 {
+    font-family: "Georgia";
+    font-size: 3em;
+    margin: 0 auto;
+    font-variant: small-caps;
+}
+
+.menuNavItem {
+    padding: 1em 2em !important;
+}
+
+div#header {
+    width: 70%;
+    margin: 0 500px 0 200px;
+}
+
+#main {
+    background: inherit;
+    color: rgb(230,230,230);
+}
+
+#mainPadding {
+    background: rgb(60,30,50);
+    margin: 10px 500px 100px 200px;
+    padding: 20px 100px 50px 50px;
+    width: 70%
+}
+
+#mnuNavigation {
+    height: 60px;
 }
