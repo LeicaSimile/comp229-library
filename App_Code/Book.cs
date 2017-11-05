@@ -37,8 +37,12 @@ public class Book
     public Book(string title, string author, string genre, int pages,
         string isbn="", string friend="", string comments="")
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        this.Title = title;
+        this.Author = author;
+        this.Genre = genre;
+        this.Pages = pages;
+        this.Isbn = isbn;
+        this.Friend = friend;
+        this.Comments = comments;
     }
 }
