@@ -11,4 +11,19 @@ public partial class BasicBookInfo : System.Web.UI.UserControl
     {
 
     }
+
+    public TextBox Title
+    {
+        get { return this.txtTitle; }
+    }
+
+    public TextBox Author
+    {
+        get { return this.txtAuthor; }
+    }
+
+    public TextBox Isbn
+    {
+        get { return this.txtIsbn; }
+    }
 }
