@@ -37,7 +37,7 @@
     <br />
     <asp:TextBox ID="txtComments" runat="server" Rows="4" TextMode="MultiLine"></asp:TextBox>
     <br />
-    <asp:Button ID="btnSave" runat="server" Text="Save" />
+    <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
     <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
 </asp:Content>
 
