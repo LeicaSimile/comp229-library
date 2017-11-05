@@ -6,10 +6,19 @@
     <h1>Books</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
-    <h1>Oh, isn't this amazing?</h1>
-    <p>
-        It&#39;s my favourite part because... you&#39;ll see! Here&#39;s where she meets
-        Prince Charming, but she won&#39;t discover that it&#39;s him &#39;til chapter three!
-    </p>
+    <asp:repeater runat="server" id="rptBooks">
+        <HeaderTemplate>
+            <ul>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <li><i><%# DataBinder.Eval(Container.DataItem, "Title") %></i>
+                by <%# DataBinder.Eval(Container.DataItem, "Author") %> 
+                (ISBN: <%# DataBinder.Eval(Container.DataItem, "Isbn") %>)
+            </li>
+        </ItemTemplate>
+        <FooterTemplate>
+            </ul>
+        </FooterTemplate>
+    </asp:repeater>
 </asp:Content>
 

@@ -24,6 +24,12 @@ public partial class books : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Application["books"] == null)
+        {
+            Application["books"] = new List<Book>();
+        }
 
+        rptBooks.DataSource = Application["books"] as List<Book>;
+        rptBooks.DataBind();
     }
 }
