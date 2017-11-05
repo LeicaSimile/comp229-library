@@ -6,6 +6,9 @@
     <h1>Library collection</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
+    <h2>Themes!</h2>
+    <p><a href="setup.aspx">Themes!</a></p>
+
     <h2>Look at this stuff</h2>
     <p>
         Isn't it neat? Wouldn't you think my collection's complete? Wouldn't you think I'm the girl,
