@@ -8,14 +8,30 @@ using System.Web;
 /// </summary>
 public class Book
 {
+    private string isbn;
     private int pages;
     
     public string Title { get; set; }
     public string Author { get; set; }
-    public string Isbn { get; set; }
     public string Genre { get; set; }
     public string Friend { get; set; }
     public string Comments { get; set; }
+
+    public string Isbn
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(isbn))
+            {
+                return "Unknown";
+            }
+            else
+            {
+                return isbn;
+            }
+        }
+        set { isbn = value; }
+    }
 
     public int Pages
     {
