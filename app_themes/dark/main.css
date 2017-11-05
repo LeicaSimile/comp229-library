@@ -29,6 +29,15 @@ header h1 {
     font-variant: small-caps;
 }
 
+input, select, textarea {
+    margin-bottom: 1em;
+}
+
+textarea {
+    display: block;
+    width: 60%;
+}
+
 .menuNavItem {
     padding: 1em 2em !important;
 }
