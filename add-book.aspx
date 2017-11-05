@@ -20,16 +20,17 @@
         <asp:ListItem>Sci-fi</asp:ListItem>
         <asp:ListItem>Other</asp:ListItem>
     </asp:DropDownList>
+    <br />
     Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages"></asp:requiredfieldvalidator>
-    <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1" MaximumValue="99999"></asp:rangevalidator>
+    <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages" ForeColor="Red"></asp:requiredfieldvalidator>
+    <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1" MaximumValue="99999" ForeColor="Red"></asp:rangevalidator>
     <br />
     Landed to a friend:
     <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
     <asp:RadioButton ID="radLandedNo" runat="server" Text="No" GroupName="grpLanded" Checked="True" />
     <br />
     Name of friend: <asp:TextBox ID="txtFriendName" runat="server"></asp:TextBox>
-    <asp:CustomValidator ID="vldFriendName" runat="server" OnServerValidate="CheckFriendName" ErrorMessage="Name of friend required" ControlToValidate="txtFriendName" ValidateEmptyText="True"></asp:CustomValidator>
+    <asp:CustomValidator ID="vldFriendName" runat="server" OnServerValidate="CheckFriendName" ErrorMessage="Name of friend required" ControlToValidate="txtFriendName" ValidateEmptyText="True" ForeColor="Red"></asp:CustomValidator>
     <br />
     <br />
     Comments:
