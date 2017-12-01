@@ -5,5 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="headerContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="mainContent" Runat="Server">
+    <asp:Button ID="btnDelete" runat="server" Text="Delete" />
 </asp:Content>
 
