@@ -11,7 +11,7 @@
             <ul>
         </HeaderTemplate>
         <ItemTemplate>
-            <li><i><%# DataBinder.Eval(Container.DataItem, "Title") %></i>
+            <li><asp:LinkButton ID="lbtnBook" runat="server" Text=<%# DataBinder.Eval(Container.DataItem, "Title") %> />
                 by <%# DataBinder.Eval(Container.DataItem, "Author") %> 
                 (ISBN: <%# DataBinder.Eval(Container.DataItem, "Isbn") %>)
             </li>
