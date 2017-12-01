@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* Angelica Catalan, 300846458*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,7 +33,7 @@ public class Book
         }
         set { isbn = value; }
     }
-
+    /* Angelica Catalan, 300846458*/
     public int Pages
     {
         get { return pages; }
@@ -62,3 +63,4 @@ public class Book
         this.Comments = comments;
     }
 }
+/* Angelica Catalan, 300846458*/

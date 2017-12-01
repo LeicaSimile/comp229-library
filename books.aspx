@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="books.aspx.cs" Inherits="books" %>
+﻿<%-- Angelica Catalan, 300846458 --%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="books.aspx.cs" Inherits="books" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -6,6 +7,7 @@
     <h1>Books</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
+<%-- Angelica Catalan, 300846458 --%>
     <asp:repeater runat="server" id="rptBooks">
         <HeaderTemplate>
             <ul>
@@ -21,4 +23,4 @@
         </FooterTemplate>
     </asp:repeater>
 </asp:Content>
-
+<%-- Angelica Catalan, 300846458 --%>

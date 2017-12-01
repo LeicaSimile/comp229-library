@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Angelica Catalan, 300846458 -->
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="~/" title="Root"  description="Root">
     <siteMapNode url="~/home.aspx" title="Home"  description="Home" />
@@ -8,3 +9,4 @@
     <siteMapNode url="~/search.aspx" title="Search"  description="Search" />
   </siteMapNode>
 </siteMap>
+<!-- Angelica Catalan, 300846458 -->

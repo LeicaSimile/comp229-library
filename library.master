@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="library.master.cs" Inherits="library" %>
+﻿<%-- Angelica Catalan, 300846458 --%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="library.master.cs" Inherits="library" %>
 
 <!DOCTYPE html>
 
@@ -10,6 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+<%-- Angelica Catalan, 300846458 --%>
         <header>
             <asp:SiteMapDataSource ID="librarySiteMap" runat="server" ShowStartingNode="false" />
             <asp:Menu ID="mnuNavigation" DataSourceID="librarySiteMap" runat="server" Orientation="Horizontal">
@@ -27,3 +29,4 @@
     </form>
 </body>
 </html>
+<%-- Angelica Catalan, 300846458 --%>

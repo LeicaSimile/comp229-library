@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="setup.aspx.cs" Inherits="setup" %>
+﻿<%-- Angelica Catalan, 300846458 --%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="setup.aspx.cs" Inherits="setup" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -12,4 +13,4 @@
     <br />
     <asp:button ID="btnSave" runat="server" text="Save" OnClick="btnSave_Click" />
 </asp:Content>
-
+<%-- Angelica Catalan, 300846458 --%>

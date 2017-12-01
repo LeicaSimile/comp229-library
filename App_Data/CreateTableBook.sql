@@ -1,4 +1,5 @@
-﻿USE [LIBRARY.MDF]
+﻿-- Angelica Catalan, 300846458
+USE [LIBRARY.MDF]
 GO
 
 /****** Object: Table [dbo].[Book] Script Date: 12/1/2017 6:02:27 PM ******/
@@ -8,6 +9,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+-- Angelica Catalan, 300846458
 CREATE TABLE [dbo].[Book] (
     [Id]           INT            NOT NULL,
     [Title]        NVARCHAR (100) NOT NULL,
@@ -20,3 +22,4 @@ CREATE TABLE [dbo].[Book] (
 );
 
 
+-- Angelica Catalan, 300846458

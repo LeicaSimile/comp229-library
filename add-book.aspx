@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="add-book.aspx.cs" Inherits="add_book" %>
+﻿<%-- Angelica Catalan, 300846458 --%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="add-book.aspx.cs" Inherits="add_book" %>
 <%@ Register TagPrefix="field" TagName="BasicBookInfo" Src="~/BasicBookInfo.ascx" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">
@@ -20,6 +21,7 @@
         <asp:ListItem>Sci-fi</asp:ListItem>
         <asp:ListItem>Other</asp:ListItem>
     </asp:DropDownList>
+<%-- Angelica Catalan, 300846458 --%>
     <br />
     Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>
     <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages" ForeColor="Red"></asp:requiredfieldvalidator>
@@ -40,4 +42,4 @@
     <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
     <input type="reset" id="btnCancel" value="Cancel" />
 </asp:Content>
-
+<%-- Angelica Catalan, 300846458 --%>

@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
+﻿<%-- Angelica Catalan, 300846458 --%>
+<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -15,6 +16,7 @@
         girl who has everything? Look at this trove, treasures untold. How many wonders can one cavern hold?
         Lookin&#39; around here, you&#39;d think, &quot;Sure. She&#39;s got everything.&quot;
     </p>
+<%-- Angelica Catalan, 300846458 --%>
     <p>
         I&#39;ve got gadgets and gizmos aplenty. I&#39;ve got whosits and whatsits galore. You want thingamabobs?
         I got twenty. But who cares? No big deal. I want more.
@@ -38,4 +40,4 @@
         Out of the sea... wish I could be... part of that world.
     </p>
 </asp:Content>
-
+<%-- Angelica Catalan, 300846458 --%>
