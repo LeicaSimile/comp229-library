@@ -53,4 +53,9 @@ public partial class books : System.Web.UI.Page
             conn.Close();
         }
     }
+
+    protected void rptBooks_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+        Response.Redirect("book-details.aspx");
+    }
 }
