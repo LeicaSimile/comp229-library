@@ -81,7 +81,7 @@ public partial class add_book : System.Web.UI.Page
         title = bbiEntry.Title.Text;
         author = bbiEntry.Author.Text;
         isbn = bbiEntry.Isbn.Text;
-        genre = ddlGenre.SelectedValue;
+        genre = ddlGenre.SelectedItem.Text;
         friend = txtFriendName.Text;
         comments = txtComments.Text;
 
