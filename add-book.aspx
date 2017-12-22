@@ -17,9 +17,9 @@
     <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages" ForeColor="Red"></asp:requiredfieldvalidator>
     <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1" MaximumValue="99999" ForeColor="Red"></asp:rangevalidator>
     <br />
-    Landed to a friend:
-    <asp:RadioButton ID="radLandedYes" runat="server" GroupName="grpLanded" Text="Yes" />
-    <asp:RadioButton ID="radLandedNo" runat="server" Text="No" GroupName="grpLanded" Checked="True" />
+    Lended to a friend:
+    <asp:RadioButton ID="radLendedYes" runat="server" GroupName="grpLended" Text="Yes" />
+    <asp:RadioButton ID="radLendedNo" runat="server" Text="No" GroupName="grpLended" Checked="True" />
     <br />
     Name of friend: <asp:TextBox ID="txtFriendName" runat="server"></asp:TextBox>
     <asp:CustomValidator ID="vldFriendName" runat="server" OnServerValidate="CheckFriendName" ErrorMessage="Name of friend required" ControlToValidate="txtFriendName" ValidateEmptyText="True" ForeColor="Red"></asp:CustomValidator>

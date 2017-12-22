@@ -32,6 +32,14 @@ public partial class add_book : System.Web.UI.Page
         }
     }
 
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        if (Page.IsValid)
+        {
+            SaveBook();
+        }
+    }
+
     private void BindGenres()
     {
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
@@ -64,27 +72,45 @@ public partial class add_book : System.Web.UI.Page
         }
     }
 
-    protected void btnSave_Click(object sender, EventArgs e)
+
+    private  void SaveBook()
     {
-        if (Page.IsValid)
+        string title, author, isbn, genre, friend, comments;
+        int numPages;
+
+        title = bbiEntry.Title.Text;
+        author = bbiEntry.Author.Text;
+        isbn = bbiEntry.Isbn.Text;
+        genre = ddlGenre.SelectedValue;
+        friend = txtFriendName.Text;
+        comments = txtComments.Text;
+
+        if (!Int32.TryParse(txtPages.Text, out numPages))
         {
-            string title, author, isbn, genre, friend, comments;
-            int numPages;
-            Book newBook;
+            numPages = 1;
+        }
 
-            title = bbiEntry.Title.Text;
-            author = bbiEntry.Author.Text;
-            isbn = bbiEntry.Isbn.Text;
-            genre = ddlGenre.SelectedValue;
-            friend = txtFriendName.Text;
-            comments = txtComments.Text;
+        string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connectionString);
 
-            if (!Int32.TryParse(txtPages.Text, out numPages))
-            {
-                numPages = 1;
-            }
+        SqlCommand comm = new SqlCommand("insert into Books (Title, Authors, Isbn, Pages, Genre, Borrower, Comments)" +
+            "values (@Title, @Authors, @Isbn, @Pages, @Genre, @Borrower, @Comments)", conn);
+        comm.Parameters.AddWithValue("@Title", title);
+        comm.Parameters.AddWithValue("@Authors", author);
+        comm.Parameters.AddWithValue("@Isbn", isbn);
+        comm.Parameters.AddWithValue("@Pages", numPages);
+        comm.Parameters.AddWithValue("@Genre", genre);
+        comm.Parameters.AddWithValue("@Borrower", friend);
+        comm.Parameters.AddWithValue("@Comments", comments);
 
-            newBook = new Book(title, author, genre, numPages, isbn, friend, comments);
+        try
+        {
+            conn.Open();
+            comm.ExecuteNonQuery();
+        }
+        finally
+        {
+            conn.Close();
         }
     }
 }
