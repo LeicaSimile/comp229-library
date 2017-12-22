@@ -56,6 +56,6 @@ public partial class books : System.Web.UI.Page
 
     protected void rptBooks_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
-        Response.Redirect("book-details.aspx");
+        Response.Redirect(String.Format("book-details.aspx?id={0}", e.CommandArgument));
     }
 }

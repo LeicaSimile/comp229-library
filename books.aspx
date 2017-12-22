@@ -13,7 +13,7 @@
             <ul>
         </HeaderTemplate>
         <ItemTemplate>
-            <li><asp:LinkButton ID="lbtnBook" runat="server" Text=<%# Eval("Title") %> />
+            <li><asp:LinkButton ID="lbtnBook" runat="server" Text=<%# Eval("Title") %> CommandArgument=<%# Eval("Id") %> />
                 by <%# Eval("Authors") %> 
                 (ISBN: <%# Eval("Isbn") %>)
             </li>
