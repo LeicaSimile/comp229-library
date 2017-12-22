@@ -10,17 +10,7 @@
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
     <field:BasicBookInfo ID="bbiEntry" runat="server" />
     <br />
-    Genre: <asp:DropDownList ID="ddlGenre" runat="server">
-        <asp:ListItem>Action/adventure</asp:ListItem>
-        <asp:ListItem>Drama</asp:ListItem>
-        <asp:ListItem>Fantasy</asp:ListItem>
-        <asp:ListItem>Horror</asp:ListItem>
-        <asp:ListItem>Mystery</asp:ListItem>
-        <asp:ListItem>Romance</asp:ListItem>
-        <asp:ListItem>Satire</asp:ListItem>
-        <asp:ListItem>Sci-fi</asp:ListItem>
-        <asp:ListItem>Other</asp:ListItem>
-    </asp:DropDownList>
+    Genre: <asp:DropDownList ID="ddlGenre" runat="server" />
 <%-- Angelica Catalan, 300846458 --%>
     <br />
     Number of pages: <asp:TextBox ID="txtPages" runat="server" TextMode="Number"></asp:TextBox>

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,9 +26,33 @@ public partial class add_book : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Application["books"] == null)
+        if (!IsPostBack)
         {
-            Application["books"] = new List<Book>();
+            BindGenres();
+        }
+    }
+
+    private void BindGenres()
+    {
+        string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connectionString);
+
+        SqlCommand comm = new SqlCommand("select Id, Genre from Genres", conn);
+
+        try
+        {
+            conn.Open();
+            SqlDataReader reader = comm.ExecuteReader();
+
+            ddlGenre.DataSource = reader;
+            ddlGenre.DataValueField = "Id";
+            ddlGenre.DataTextField = "Genre";
+            ddlGenre.DataBind();
+            reader.Close();
+        }
+        finally
+        {
+            conn.Close();
         }
     }
 
