@@ -7,6 +7,9 @@
     <h1>Search</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
+    <asp:dropdownlist runat="server" ID="ddlGenre"></asp:dropdownlist>
+    <asp:dropdownlist runat="server" ID="ddlBorrower"></asp:dropdownlist>
+    <asp:button runat="server" ID="btnSearch" text="Search" />
 <%-- Angelica Catalan, 300846458 --%>
     <asp:panel runat="server" ID="pnlResults">
         Results:<br />
