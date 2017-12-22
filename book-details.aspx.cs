@@ -32,6 +32,27 @@ public partial class book_details : System.Web.UI.Page
         }
     }
 
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connectionString);
+
+        SqlCommand comm = new SqlCommand("delete from Books where Id = @Id", conn);
+        comm.Parameters.AddWithValue("@Id", Request.QueryString["id"]);
+
+        try
+        {
+            conn.Open();
+            comm.ExecuteNonQuery();
+        }
+        finally
+        {
+            conn.Close();
+        }
+
+        Response.Redirect("books.aspx");
+    }
+
     private void GetDetails()
     {
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
