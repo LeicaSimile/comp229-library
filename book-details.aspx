@@ -4,9 +4,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="headerContent" Runat="Server">
+    <h1>Book Details</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="mainContent" Runat="Server">
-    <h1><asp:Label ID="lblTitle" runat="server" /></h1>
+    <h2><asp:Label ID="lblTitle" runat="server" /></h2>
     Author(s): <asp:Label ID="lblAuthors" runat="server" /><br />
     ISBN: <asp:Label ID="lblIsbn" runat="server" /><br />
     Pages: <asp:Label ID="lblPages" runat="server" /><br />
