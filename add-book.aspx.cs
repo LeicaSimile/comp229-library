@@ -58,7 +58,7 @@ public partial class add_book : System.Web.UI.Page
 
     protected void CheckFriendName(object sender, ServerValidateEventArgs e)
     {
-        if (radLandedYes.Checked && string.IsNullOrEmpty(txtFriendName.Text))
+        if (radLendedYes.Checked && string.IsNullOrEmpty(txtFriendName.Text))
         {
             e.IsValid = false;
         }
@@ -68,7 +68,6 @@ public partial class add_book : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
-            List<Book> books = Application["books"] as List<Book>;
             string title, author, isbn, genre, friend, comments;
             int numPages;
             Book newBook;
@@ -86,8 +85,6 @@ public partial class add_book : System.Web.UI.Page
             }
 
             newBook = new Book(title, author, genre, numPages, isbn, friend, comments);
-            books.Add(newBook);
-            Application["books"] = books;
         }
     }
 }
