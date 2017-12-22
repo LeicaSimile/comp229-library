@@ -8,7 +8,9 @@
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
 <%-- Angelica Catalan, 300846458 --%>
-    <asp:repeater runat="server" id="rptBooks" OnItemCommand="rptBooks_ItemCommand">
+    <asp:panel runat="server" ID="pnlResults">
+        Results:<br />
+        <asp:repeater runat="server" id="rptBooks" OnItemCommand="rptBooks_ItemCommand">
         <HeaderTemplate>
             <ul>
         </HeaderTemplate>
@@ -21,6 +23,7 @@
         <FooterTemplate>
             </ul>
         </FooterTemplate>
-    </asp:repeater>
+        </asp:repeater>
+    </asp:panel>
 </asp:Content>
 <%-- Angelica Catalan, 300846458 --%>
