@@ -1,5 +1,5 @@
 ﻿<%-- Angelica Catalan, 300846458 --%>
-<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="add-book.aspx.cs" Inherits="add_book" %>
+<%@ Page Title="Add Book - Library" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="add-book.aspx.cs" Inherits="add_book" %>
 <%@ Register TagPrefix="field" TagName="BasicBookInfo" Src="~/BasicBookInfo.ascx" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">

@@ -14,6 +14,6 @@
     Borrower: <asp:Label ID="lblBorrower" runat="server" /><br />
     Comments: <asp:Label ID="lblComments" runat="server" /><br />
 
-    <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+    <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
 </asp:Content>
 <%-- Angelica Catalan, 300846458 --%>

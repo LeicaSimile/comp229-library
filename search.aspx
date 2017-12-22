@@ -1,5 +1,5 @@
 ﻿<%-- Angelica Catalan, 300846458 --%>
-<%@ Page Title="" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="search.aspx.cs" Inherits="search" %>
+<%@ Page Title="Search - Library" Language="C#" MasterPageFile="~/library.master" AutoEventWireup="true" CodeFile="search.aspx.cs" Inherits="search" %>
 
 <asp:Content ID="head" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
