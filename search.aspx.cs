@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -25,5 +27,32 @@ public partial class search : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+    }
+
+    private void BindData()
+    {
+        string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connectionString);
+
+        SqlCommand comm = new SqlCommand("select Id, Title, Authors, Isbn from Books", conn);
+
+        try
+        {
+            conn.Open();
+            SqlDataReader reader = comm.ExecuteReader();
+
+            rptBooks.DataSource = reader;
+            rptBooks.DataBind();
+            reader.Close();
+        }
+        finally
+        {
+            conn.Close();
+        }
+    }
+
+    protected void rptBooks_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+        Response.Redirect(String.Format("book-details.aspx?id={0}", e.CommandArgument));
     }
 }
