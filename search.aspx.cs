@@ -32,6 +32,16 @@ public partial class search : System.Web.UI.Page
         }
     }
 
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        BindResults();
+    }
+
+    protected void rptBooks_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+        Response.Redirect(String.Format("book-details.aspx?id={0}", e.CommandArgument));
+    }
+
     private void BindSearchOptions()
     {
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
@@ -66,8 +76,46 @@ public partial class search : System.Web.UI.Page
         }
     }
 
-    protected void rptBooks_ItemCommand(object source, RepeaterCommandEventArgs e)
+    private void BindResults()
     {
-        Response.Redirect(String.Format("book-details.aspx?id={0}", e.CommandArgument));
+        string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connectionString);
+
+        string genre = ddlGenre.SelectedItem.Text;
+        string borrower = ddlBorrower.SelectedItem.Text;
+        bool hasAddedWhere = false;
+
+
+        SqlCommand comm = new SqlCommand("select Id, Title, Authors, Isbn from Books", conn);
+        if (ddlGenre.SelectedIndex != 0)
+        {
+            hasAddedWhere = true;
+            comm.CommandText += " where Genre = @Genre";
+            comm.Parameters.AddWithValue("@Genre", genre);
+        }
+
+        if (ddlBorrower.SelectedIndex != 0)
+        {
+            if (!hasAddedWhere)
+                comm.CommandText += " where ";
+            else
+                comm.CommandText += " and ";
+            comm.CommandText += " Borrower = @Borrower";
+            comm.Parameters.AddWithValue("@Borrower", borrower);
+        }
+
+        try
+        {
+            conn.Open();
+            SqlDataReader reader = comm.ExecuteReader();
+
+            rptBooks.DataSource = reader;
+            rptBooks.DataBind();
+            reader.Close();
+        }
+        finally
+        {
+            conn.Close();
+        }
     }
 }
