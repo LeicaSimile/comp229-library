@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Angelica Catalan, 300846458
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -39,7 +40,7 @@ public partial class add_book : System.Web.UI.Page
             SaveBook();
         }
     }
-
+    // Angelica Catalan, 300846458
     private void BindGenres()
     {
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
@@ -114,3 +115,4 @@ public partial class add_book : System.Web.UI.Page
         }
     }
 }
+// Angelica Catalan, 300846458

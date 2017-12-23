@@ -7,6 +7,7 @@
     <h1>Book Details</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="mainContent" Runat="Server">
+    <%-- Angelica Catalan, 300846458 --%>
     <h2><asp:Label ID="lblTitle" runat="server" /></h2>
     <asp:Label ID="lblError" runat="server"></asp:Label>
     <asp:Panel ID="pnlDetails" runat="server">

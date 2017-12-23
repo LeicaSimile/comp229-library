@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Angelica Catalan, 300846458
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -44,7 +45,7 @@ public partial class book_details : System.Web.UI.Page
             pnlDetails.Visible = true;
         }
     }
-
+    // Angelica Catalan, 300846458
     protected void btnDelete_Click(object sender, EventArgs e)
     {
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
@@ -105,3 +106,4 @@ public partial class book_details : System.Web.UI.Page
         }
     }
 }
+// Angelica Catalan, 300846458

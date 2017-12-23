@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Angelica Catalan, 300846458
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -31,7 +32,7 @@ public partial class search : System.Web.UI.Page
             BindSearchOptions();
         }
     }
-
+    // Angelica Catalan, 300846458
     protected void btnSearch_Click(object sender, EventArgs e)
     {
         BindResults();
@@ -119,3 +120,4 @@ public partial class search : System.Web.UI.Page
         }
     }
 }
+// Angelica Catalan, 300846458

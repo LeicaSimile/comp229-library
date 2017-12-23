@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Angelica Catalan, 300846458
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,7 +22,7 @@ public partial class setup : System.Web.UI.Page
             Page.Theme = "light";
         }
     }
-
+    // Angelica Catalan, 300846458
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -50,3 +51,4 @@ public partial class setup : System.Web.UI.Page
         Server.Transfer(Request.FilePath);
     }
 }
+// Angelica Catalan, 300846458
