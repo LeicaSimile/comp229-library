@@ -28,7 +28,20 @@ public partial class book_details : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            GetDetails();
+            try
+            {
+                GetDetails();
+            }
+            catch (SqlException)
+            {
+                lblTitle.Text = "Uh oh. Something went wrong!";
+                lblError.Text = "We couldn't find that book :c";
+                pnlDetails.Visible = false;
+                return;
+            }
+
+            lblError.Text = "";
+            pnlDetails.Visible = true;
         }
     }
 
