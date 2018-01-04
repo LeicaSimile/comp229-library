@@ -104,6 +104,11 @@ public partial class book_details : System.Web.UI.Page
             dtlDetails.EditItemIndex = e.Item.ItemIndex;
             GetDetails();
         }
+        else if (e.CommandName == "CancelEditing")
+        {
+            dtlDetails.EditItemIndex = -1;
+            GetDetails();
+        }
     }
 }
 // Angelica Catalan, 300846458

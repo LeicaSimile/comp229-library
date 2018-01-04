@@ -23,7 +23,8 @@
                 Comments: <%# Eval("Comments") %><br />
             </ItemTemplate>
             <EditItemTemplate>
-                <asp:LinkButton ID="lnkUpdate" runat="server" CommandArgument=<%# Eval("Id") %> CommandName="UpdateItem">Edit</asp:LinkButton><br />
+                <asp:LinkButton ID="lnkUpdate" runat="server" CommandArgument=<%# Eval("Id") %> CommandName="UpdateItem">Edit</asp:LinkButton>
+                <asp:LinkButton ID="lnkCancel" runat="server" CommandName="CancelEditing">Cancel</asp:LinkButton><br />
                 Title: <asp:TextBox ID="txtTitle" runat="server" Text=<%# Eval("Title") %>/><br />
                 <asp:requiredfieldvalidator runat="server" errormessage="Title required" ID="rfvTitle" ControlToValidate="txtTitle" ForeColor="Red"></asp:requiredfieldvalidator><br />
                 Author(s): <asp:TextBox ID="txtAuthors" runat="server" Text=<%# Eval("Authors") %>/><br />
