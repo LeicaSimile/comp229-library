@@ -81,11 +81,28 @@ public partial class book_details : System.Web.UI.Page
             SqlDataReader reader = comm.ExecuteReader();
             dtlDetails.DataSource = reader;
             dtlDetails.DataBind();
+
             reader.Close();
+
+            reader = comm.ExecuteReader();
+            reader.Read();
+            string title = reader["Title"].ToString();
+
+            this.Title = title;
+            lblTitle.Text = title;
         }
         finally
         {
             conn.Close();
+        }
+    }
+
+    protected void dtlDetails_ItemCommand(object source, DataListCommandEventArgs e)
+    {
+        if (e.CommandName == "EditItem")
+        {
+            dtlDetails.EditItemIndex = e.Item.ItemIndex;
+            GetDetails();
         }
     }
 }
