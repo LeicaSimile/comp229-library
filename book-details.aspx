@@ -25,9 +25,14 @@
             <EditItemTemplate>
                 <asp:LinkButton ID="lnkUpdate" runat="server" CommandArgument=<%# Eval("Id") %> CommandName="UpdateItem">Edit</asp:LinkButton><br />
                 Title: <asp:TextBox ID="txtTitle" runat="server" Text=<%# Eval("Title") %>/><br />
+                <asp:requiredfieldvalidator runat="server" errormessage="Title required" ID="rfvTitle" ControlToValidate="txtTitle" ForeColor="Red"></asp:requiredfieldvalidator><br />
                 Author(s): <asp:TextBox ID="txtAuthors" runat="server" Text=<%# Eval("Authors") %>/><br />
+                <asp:requiredfieldvalidator runat="server" errormessage="Author required" ID="rfvAuthor" ControlToValidate="txtAuthors" ForeColor="Red"></asp:requiredfieldvalidator><br />
                 ISBN: <asp:TextBox ID="txtIsbn" runat="server" Text=<%# Eval("Isbn") %>/><br />
                 Pages: <asp:TextBox ID="txtPages" runat="server" Text=<%# Eval("Pages") %> TextMode="Number" /><br />
+                <asp:requiredfieldvalidator runat="server" errormessage="Number of pages required" ID="rfvPages" ControlToValidate="txtPages" ForeColor="Red"></asp:requiredfieldvalidator>
+                <asp:rangevalidator runat="server" errormessage="Book must have at least 1 page." ID="rvPages" ControlToValidate="txtPages" MinimumValue="1" MaximumValue="99999" ForeColor="Red"></asp:rangevalidator>
+                <br />
                 Genre: <asp:DropDownList ID="ddlGenre" runat="server" /><br />
                 Borrower: <asp:TextBox ID="txtBorrower" runat="server" Text=<%# Eval("Borrower") %>/><br />
                 Comments: <asp:TextBox ID="txtComments" runat="server" Text=<%# Eval("Comments") %> TextMode="MultiLine" /><br />
