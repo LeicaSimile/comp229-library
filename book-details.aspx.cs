@@ -79,26 +79,9 @@ public partial class book_details : System.Web.UI.Page
         {
             conn.Open();
             SqlDataReader reader = comm.ExecuteReader();
-            reader.Read();
-
-            string title = reader["Title"].ToString();
-            string authors = reader["Authors"].ToString();
-            string isbn = reader["Isbn"].ToString();
-            string pages = reader["Pages"].ToString();
-            string genre = reader["Genre"].ToString();
-            string borrower = reader["Borrower"].ToString();
-            string comments = reader["Comments"].ToString();
-
+            dtlDetails.DataSource = reader;
+            dtlDetails.DataBind();
             reader.Close();
-
-            this.Title = title;
-            lblTitle.Text = title;
-            lblAuthors.Text = authors;
-            lblIsbn.Text = isbn;
-            lblPages.Text = pages;
-            lblGenre.Text = genre;
-            lblBorrower.Text = borrower;
-            lblComments.Text = comments;
         }
         finally
         {

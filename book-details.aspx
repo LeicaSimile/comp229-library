@@ -11,12 +11,16 @@
     <h2><asp:Label ID="lblTitle" runat="server" /></h2>
     <asp:Label ID="lblError" runat="server"></asp:Label>
     <asp:Panel ID="pnlDetails" runat="server">
-        Author(s): <asp:Label ID="lblAuthors" runat="server" /><br />
-        ISBN: <asp:Label ID="lblIsbn" runat="server" /><br />
-        Pages: <asp:Label ID="lblPages" runat="server" /><br />
-        Genre: <asp:Label ID="lblGenre" runat="server" /><br />
-        Borrower: <asp:Label ID="lblBorrower" runat="server" /><br />
-        Comments: <asp:Label ID="lblComments" runat="server" /><br />
+        <asp:DataList ID="dtlDetails" runat="server">
+            <ItemTemplate>
+                Author(s): <%# Eval("Authors") %><br />
+                ISBN: <%# Eval("Isbn") %><br />
+                Pages: <%# Eval("Pages") %><br />
+                Genre: <%# Eval("Genre") %><br />
+                Borrower: <%# Eval("Borrower") %><br />
+                Comments: <%# Eval("Comments") %><br />
+            </ItemTemplate>
+        </asp:DataList>
 
         <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
     </asp:Panel>
