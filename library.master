@@ -18,6 +18,7 @@
                 <StaticMenuItemStyle CssClass="menuNavItem" />
             </asp:Menu>
             <div id="header">
+                <asp:LoginStatus ID="logStatus" runat="server" />
                 <asp:ContentPlaceHolder ID="headerContent" runat="server"></asp:ContentPlaceHolder>
             </div>
         </header>

@@ -23,7 +23,7 @@
                 Comments: <%# Eval("Comments") %><br />
             </ItemTemplate>
             <EditItemTemplate>
-                <asp:LinkButton ID="lnkUpdate" runat="server" CommandArgument=<%# Eval("Id") %> CommandName="UpdateItem">Edit</asp:LinkButton>
+                <asp:LinkButton ID="lnkUpdate" runat="server" CommandArgument=<%# Eval("Id") %> CommandName="UpdateItem">Update</asp:LinkButton>
                 <asp:LinkButton ID="lnkCancel" runat="server" CommandName="CancelEditing">Cancel</asp:LinkButton><br />
                 Title: <asp:TextBox ID="txtTitle" runat="server" Text=<%# Eval("Title") %>/><br />
                 <asp:requiredfieldvalidator runat="server" errormessage="Title required" ID="rfvTitle" ControlToValidate="txtTitle" ForeColor="Red"></asp:requiredfieldvalidator><br />
@@ -37,10 +37,11 @@
                 Genre: <asp:DropDownList ID="ddlGenre" runat="server" /><br />
                 Borrower: <asp:TextBox ID="txtBorrower" runat="server" Text=<%# Eval("Borrower") %>/><br />
                 Comments: <asp:TextBox ID="txtComments" runat="server" Text=<%# Eval("Comments") %> TextMode="MultiLine" /><br />
+                <asp:TextBox ID="txtNewGenre" runat="server" /><asp:Button ID="btnAddGenre" runat="server" Text="Add genre" CommandName="AddGenre" />
             </EditItemTemplate>
         </asp:DataList>
 
-        <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
+        <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" /><br />
     </asp:Panel>
 </asp:Content>
 <%-- Angelica Catalan, 300846458 --%>

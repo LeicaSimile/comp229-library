@@ -7,6 +7,7 @@
     <h1>Search</h1>
 </asp:Content>
 <asp:Content ID="main" ContentPlaceHolderID="mainContent" Runat="Server">
+    Author: <asp:TextBox ID="txtAuthor" runat="server" />
     Genre: <asp:dropdownlist runat="server" ID="ddlGenre">
     </asp:dropdownlist><br />
     Borrower: <asp:dropdownlist runat="server" ID="ddlBorrower"></asp:dropdownlist>

@@ -82,16 +82,29 @@ public partial class search : System.Web.UI.Page
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
         SqlConnection conn = new SqlConnection(connectionString);
 
+        string author = txtAuthor.Text.Trim();
         string genre = ddlGenre.SelectedItem.Text;
         string borrower = ddlBorrower.SelectedItem.Text;
         bool hasAddedWhere = false;
 
-
         SqlCommand comm = new SqlCommand("select Id, Title, Authors, Isbn from Books", conn);
-        if (ddlGenre.SelectedIndex != 0)
+        if (!string.IsNullOrEmpty(author))
         {
             hasAddedWhere = true;
-            comm.CommandText += " where Genre = @Genre";
+            comm.CommandText += " where Authors like @Authors";
+            comm.Parameters.AddWithValue("@Authors", string.Format("%{0}%", author));
+        }
+
+        if (ddlGenre.SelectedIndex != 0)
+        {
+            if (!hasAddedWhere)
+            {
+                comm.CommandText += " where ";
+                hasAddedWhere = true;
+            }
+            else
+                comm.CommandText += " and ";
+            comm.CommandText += " Genre = @Genre";
             comm.Parameters.AddWithValue("@Genre", genre);
         }
 

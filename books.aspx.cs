@@ -38,7 +38,7 @@ public partial class books : System.Web.UI.Page
         string connectionString = ConfigurationManager.ConnectionStrings["Library"].ConnectionString;
         SqlConnection conn = new SqlConnection(connectionString);
 
-        SqlCommand comm = new SqlCommand("select Id, Title, Authors, Isbn  from Books", conn);
+        SqlCommand comm = new SqlCommand("select Id, Title, Authors, Isbn from Books", conn);
 
         try
         {
